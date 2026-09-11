@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerFit Gym</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#0b0b0d;color:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;width:100%;z-index:10;background:rgba(10,10,12,.88);backdrop-filter:blur(10px);padding:18px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:24px;font-weight:900;letter-spacing:1px}.logo span{color:#ff4d00}
+nav ul{display:flex;gap:25px;list-style:none}
+nav a:hover{color:#ff4d00}
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 8% 60px;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=80') center/cover}
+.hero-content{max-width:650px}.tag{color:#ff6a00;font-weight:800;text-transform:uppercase;letter-spacing:3px}
+h1{font-size:clamp(48px,8vw,88px);line-height:.95;margin:18px 0}.hero p{font-size:19px;color:#ddd;max-width:560px}
+.btns{display:flex;gap:15px;margin-top:30px;flex-wrap:wrap}.btn{padding:14px 24px;border-radius:8px;font-weight:800;display:inline-block}.primary{background:#ff4d00}.secondary{border:1px solid #fff}
+section{padding:90px 7%}.section-title{text-align:center;font-size:42px;margin-bottom:45px}.section-title span{color:#ff4d00}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about img{width:100%;border-radius:16px}.about p{color:#bbb;margin:15px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#151519;padding:28px;border-radius:14px;border:1px solid #27272c}.card h3{margin:12px 0;color:#fff}.card p{color:#aaa}.icon{font-size:38px}
+.pricing{background:#101014}.price{font-size:38px;font-weight:900;color:#ff5a00;margin:12px 0}.price small{font-size:15px;color:#aaa}.card ul{list-style:none;color:#bbb;margin:18px 0}.card li{margin:9px 0}.card li::before{content:'✓ ';color:#ff5a00;font-weight:bold}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.gallery img{width:100%;height:240px;object-fit:cover;border-radius:12px;transition:.3s}.gallery img:hover{transform:scale(1.03)}
+.contact{text-align:center;background:linear-gradient(180deg,#0b0b0d,#151519)}.contact p{color:#aaa;margin:10px auto 25px}.contact-box{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+footer{text-align:center;padding:25px;color:#777;border-top:1px solid #222}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#25d366;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:28px;z-index:20;box-shadow:0 5px 20px #000}
+@media(max-width:800px){nav ul{display:none}.about,.cards,.gallery{grid-template-columns:1fr}.hero{padding-left:6%;padding-right:6%}section{padding:70px 6%}.gallery img{height:220px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">POWER<span>FIT</span></div>
+  <ul>
+    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#programs">Programs</a></li>
+    <li><a href="#plans">Plans</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="tag">Train hard. Live strong.</div>
+    <h1>BUILD YOUR<br>BEST SELF.</h1>
+    <p>Modern training, expert guidance and a community that keeps you moving. Start your fitness journey today.</p>
+    <div class="btns"><a class="btn primary" href="#plans">View Memberships</a><a class="btn secondary" href="#contact">Join Now</a></div>
+  </div>
+</header>
+
+<section id="about">
+  <h2 class="section-title">Why <span>PowerFit?</span></h2>
+  <div class="about">
+    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1000&q=80" alt="Modern gym">
+    <div>
+      <h2>More than a gym.</h2>
+      <p>PowerFit is a demo fitness brand built around strength, consistency and real progress.</p>
+      <p>From beginner workouts to serious strength training, our programs are designed to help you become stronger and healthier.</p>
+      <a class="btn primary" href="#programs">Explore Programs</a>
+    </div>
+  </div>
+</section>
+
+<section id="programs">
+  <h2 class="section-title">Our <span>Programs</span></h2>
+  <div class="cards">
+    <div class="card"><div class="icon">🏋️</div><h3>Strength Training</h3><p>Build strength and muscle with structured resistance training.</p></div>
+    <div class="card"><div class="icon">🔥</div><h3>Fat Loss</h3><p>Smart workouts and conditioning designed to improve fitness.</p></div>
+    <div class="card"><div class="icon">⚡</div><h3>Personal Training</h3><p>One-on-one coaching focused on your goals and progress.</p></div>
+  </div>
+</section>
+
+<section class="pricing" id="plans">
+  <h2 class="section-title">Membership <span>Plans</span></h2>
+  <div class="cards">
+    <div class="card"><h3>Basic</h3><div class="price">₹999 <small>/month</small></div><ul><li>Gym access</li><li>Locker access</li><li>Basic equipment</li></ul><a class="btn primary" href="#contact">Choose Plan</a></div>
+    <div class="card"><h3>Pro</h3><div class="price">₹1,499 <small>/month</small></div><ul><li>Everything in Basic</li><li>Group classes</li><li>Fitness assessment</li></ul><a class="btn primary" href="#contact">Choose Plan</a></div>
+    <div class="card"><h3>Elite</h3><div class="price">₹2,499 <small>/month</small></div><ul><li>Everything in Pro</li><li>Personal training</li><li>Custom workout plan</li></ul><a class="btn primary" href="#contact">Choose Plan</a></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Gym <span>Gallery</span></h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Workout">
+    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80" alt="Training">
+    <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=800&q=80" alt="Gym equipment">
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">Ready to <span>Get Stronger?</span></h2>
+  <p>Visit PowerFit Gym or contact us to start your fitness journey.</p>
+  <div class="contact-box">
+    <a class="btn primary" href="tel:+919999999999">📞 Call Now</a>
+    <a class="btn secondary" href="https://wa.me/919999999999">💬 WhatsApp</a>
+  </div>
+  <p style="margin-top:20px">Demo address: Main Market, Your City · Mon–Sun: 6 AM–10 PM</p>
+</section>
+
+<footer>© 2026 PowerFit Gym · Demo Website</footer>
+<a class="whatsapp" href="https://wa.me/919999999999" aria-label="WhatsApp">☏</a>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const el=document.querySelector(a.getAttribute('href'));
+    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}
+  });
+});
+</script>
+</body>
+</html>
